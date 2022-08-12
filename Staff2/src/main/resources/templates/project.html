@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Staff Solutions!!</title>
+  </head>
+  <body>
+  		<h1>Welcome to STAFF SOLUTIONS INC.</h1>
+        <h3>List of Users</h3>
+        <h4><a href="#">Search by username</a></h4>
+        <h4><a href="#">Search by Project<a/></h4>
+        <h4><a href="#">Add Staff</a></h4>
+        <h4><a href="#">Update Info</a></h4>  
+      <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>First name</th>
+                            <th>last name</th>
+                            <th>email</th>
+                            <th>position</th>
+                            <th>Project</th>
+                            <th>Username</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+             <!---->        <tr th:each="employee : ${employeelist}">
+                           			<td th:text=" ${employee.id}"></td>
+           							 <td th:text=" ${employee.firstName}"></td>
+           							<td th:text=" ${employee.lastName}"></td>
+         						   <td th:text=" ${employee.email}"></td>
+         						   <td th:text=" ${employee.position}"></td>
+          							<td th:text=" ${employee.project}"></td>
+            						<td th:text=" ${employee.username}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
